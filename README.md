@@ -41,8 +41,7 @@ You're dataset should have a format as the one seen below.
   $VALIDATION_DIR/cat/cat.JPG
   ...
 ```
-	Finally to train the dataset I made a program where it will help me easily retrain and finetune the
-vgg16 and vgg19 models. Finetuning only occurs up to the last convolutional block for each model. 
+	Finally to train the dataset I made a program where it will help me easily retrain and finetune the vgg16 and vgg19 models. Finetuning only occurs up to the last convolutional block for each model. 
 This code took a lot of inspiration from Francois Chollet [blog](https://blog.keras.io/building-powerful-image-classification-models-using-very-little-data.html), read the blog to learn more about how finetuning was implemented here. So just like in his blog this code goes through 2 steps. First is training the sequential dense layers and the second step is to finetune the last convolutional block with the last few layers.    
 
 ```shell
