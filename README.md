@@ -1,15 +1,8 @@
-Incomplete
 
-what is finetuning
-preprocessing
-training
-validation
-implementation
 
 # Easy Image Classification
 
 This is to help thesis groups to easily train, evaluate and implement a Image classifier by finetuning on vgg16 or vgg19 models.
-
 
 ## Dependencies
 
