@@ -41,8 +41,13 @@ You're dataset should have a format as the one seen below.
   $VALIDATION_DIR/cat/cat.JPG
   ...
 ```
-	Finally to train the dataset I made a program where it will help me easily retrain and finetune the vgg16 and vgg19 models. Finetuning only occurs up to the last convolutional block for each model. 
-This code took a lot of inspiration from Francois Chollet [blog](https://blog.keras.io/building-powerful-image-classification-models-using-very-little-data.html), read the blog to learn more about how finetuning was implemented here. So just like in his blog this code goes through 2 steps. First is training the sequential dense layers and the second step is to finetune the last convolutional block with the last few layers.    
+Finally to train the dataset I made a program where it will help me easily retrain and finetune the vgg16 and vgg19
+models. Finetuning only occurs up to the last convolutional block for each model. 
+
+This code took a lot of inspiration from Francois Chollet [blog](https://blog.keras.io/building-powerful-image-
+classification-models-using-very-little-data.html), read the blog to learn more about how finetuning was implemented 
+here. So just like in his blog this code goes through 2 steps. First is training the sequential dense layers and the 
+second step is to finetune the last convolutional block with the last few layers.    
 
 ```shell
 #Example Usage, you can change these parameters however you want
@@ -60,11 +65,16 @@ python3 train.py --model_label vgg16 \
 		         --nb_validation_samples 600 \
 		         --directory_location "/home/elements/Desktop" \ #directory to save the ouput
 ```
-So if you are starting this script for the first time, it will take a while due to having to download the model weights at the beginning. Training may be a bit slower maybe due to not caching the bottlneck features, I am not a 100% on this. But depending on your dataset it is still better than training a CNN model from scratch.
+So if you are starting this script for the first time, it will take a while due to having to download the model weights 
+at the beginning. Training may be a bit slower maybe due to not caching the bottlneck features, I am not a 100% on 
+this. But depending on your dataset it is still better than training a CNN model from scratch.
 
-After training you should see two directories inside the directory specified. Directory names should be "Charts and Graphs" and "Model and Weights". So inside these directories I included the model, its weights and graph visualization for the training accuracy and loss. 
+After training you should see two directories inside the directory specified. Directory names should be "Charts and 
+Graphs" and "Model and Weights". So inside these directories I included the model, its weights and graph visualization 
+for the training accuracy and loss. 
 
-![training accuracy and loss](https://github.com/ryanliwag/Easy-Image-Classification/blob/master/images/model_training.png)
+![training accuracy and loss](https://github.com/ryanliwag/Easy-Image-Classification/blob/master/images
+/model_training.png)
 
 ## Evaluation
 
