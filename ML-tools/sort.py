@@ -50,8 +50,6 @@ def main(srcdir, destdir, per_train, per_validate):
 	        shutil.copy(_, os.path.join(tmp_dir, base))
 
 
-
-
 if __name__ == "__main__":
 	parser = argparse.ArgumentParser()
 
@@ -62,17 +60,17 @@ if __name__ == "__main__":
 	parser.add_argument(
 	      '--destdir',
 	      type=str,
-	      help='gg')
+	      help='directory to send the folder')
 	parser.add_argument(
 	      '--per_train',
 	      type=int,
 	      default='70',
-	      help='ff')
+	      help='percent of images sent into training folder ex: --per_train 70')
 	parser.add_argument(
 	      '--per_validate',
 	      type=int,
 	      default='20',
-	      help='number of steps you want to train top layer of the model only')
+	      help='percent of images sent into validation folder ex: --per_validate 20')
 	args = parser.parse_args()
 
 	main(args.srcdir, args.destdir, args.per_train, args.per_validate)
