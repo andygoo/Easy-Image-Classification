@@ -73,8 +73,7 @@ After training you should see two directories inside the directory specified. Di
 Graphs" and "Model and Weights". So inside these directories I included the model, its weights and graph visualization 
 for the training accuracy and loss. 
 
-![training accuracy and loss](https://github.com/ryanliwag/Easy-Image-Classification/blob/master/images
-/model_training.png)
+![training accuracy and loss](https://github.com/ryanliwag/Easy-Image-Classification/blob/master/images/model_training.png)
 
 ## Evaluation
 
