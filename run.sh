@@ -17,6 +17,17 @@ python3 totalshit.py --model_label vgg19 \
 		     --directory_location "/home/elements/Desktop/inception_v3" \
 
 
+python3 evaluate.py --model_location /home/elements/Desktop/test/model\ and\ weights/vgg16_model \
+		    --weights_location /home/elements/Desktop/test/model\ and\ weights/vgg16_weights.h5 \
+		    --testdir mango_dataset/validation/ \
+		    --destdir /home/elements/Desktop/test/Charts\ and\ Graphs/ \
+		    --nb_classes 3 --img_width 300 --img_height 300 \
+
+
+
+
+
+
 
 			
 
