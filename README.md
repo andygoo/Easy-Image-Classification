@@ -61,8 +61,8 @@ python3 train.py --model_label vgg16 \
 		     	 --learning_rate 0.0001 \
 		     	 --batch_size 1 \
 		     	 --nb_training_samples 3000 \
-		         --nb_validation_samples 600 \
-		         --directory_location "/home/elements/Desktop" \ #directory to save the ouput
+		       --nb_validation_samples 600 \
+		       --directory_location "/home/elements/Desktop" \ #directory to save the ouput
 ```
 So if you are starting this script for the first time, it will take a while due to having to download the model weights 
 at the beginning. Training may be a bit slower maybe due to not caching the bottlneck features, I am not a 100% on 
@@ -70,14 +70,30 @@ this. But depending on your dataset it is still better than training a CNN model
 
 After training you should see two directories inside the directory specified. Directory names should be "Charts and 
 Graphs" and "Model and Weights". So inside these directories I included the model, its weights and graph visualization 
-for the training accuracy and loss. 
+for the training accuracy and loss.
 
 ![training accuracy and loss](https://github.com/ryanliwag/Easy-Image-Classification/blob/master/images/model_training.png)
 
 ## Evaluation
 
+  Next step is evaluating the model. Simply specify where the trained model and weights are located, which were all produced by the running the train.py. Also specify which dataset you would want to evaluate your model over, you can use the previous validation or prepare a seperate testing dataset.
 
 
-## Implementation
+```shell
+#Example Usage of the evaluate.py script
+
+python3 evaluate.py --model_location vgg16_model 
+          --weights_location vgg16_weights.h5 
+          --testdir mango_dataset/testing/ 
+          --destdir /home/evaluate 
+          --nb_classes 3 --img_width 300 --img_height 300
+
+```
+The output figures should then be saved in your specified destination directory. Also if you're training with gpu and you have enough vram memory, you can comment out the line "with tf.device('/cpu:0'):" in evaluate.py.
+
+![graphs and figures](https://github.com/ryanliwag/Easy-Image-Classification/blob/master/images/evaluate.png)
+
+## Implementation with OpenCV 
+
 
 ## still updating
