@@ -96,4 +96,6 @@ The output figures should then be saved in your specified destination directory.
 ## Implementation with OpenCV 
 
 
+## Credits
+
 ## still updating
