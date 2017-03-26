@@ -11,15 +11,8 @@ from keras.models import model_from_json
 from keras.callbacks import History, TensorBoard, EarlyStopping
 
 import os
-
-import scikitplot as skp
-import scikitplot.plotters as skplt
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.datasets import load_digits as load_data
 import matplotlib.pyplot as plt
-from scikitplot import classifier_factory
-from sklearn.datasets import load_digits as load_data
-from sklearn.naive_bayes import GaussianNB
+
 
 def evaluate(history_finetune, dir_loc):
 	#ok first the retrain

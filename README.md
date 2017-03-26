@@ -1,10 +1,14 @@
 
-
 # Easy Image Classification
 
-This is to help thesis groups to easily train, evaluate and implement a Image classifier by finetuning on vgg16 or vgg19 models.
-
+This is to help thesis groups to easily train, evaluate and implement a Image classifier by finetuning on top of pretrained vgg16 or vgg19 models. 
 ## Dependencies
+
+Keras (Tensorflow backend)
+
+Python3
+
+Opencv
 
 ## Training
 
@@ -41,6 +45,8 @@ You're dataset should have a format as the one seen below.
   $VALIDATION_DIR/cat/cat.JPG
   ...
 ```
+
+Before you can start training make sure you have keras with tensorflow as its backend and matplotlib.
 Finally to train the dataset I made a program where it will help me easily retrain and finetune the vgg16 and vgg19
 models. Finetuning only occurs up to the last convolutional block for each model. 
 
@@ -75,7 +81,6 @@ for the training accuracy and loss.
 ![training accuracy and loss](https://github.com/ryanliwag/Easy-Image-Classification/blob/master/images/model_training.png)
 
 ## Evaluation
-
   Next step is evaluating the model. Simply specify where the trained model and weights are located, which were all produced by the running the train.py. Also specify which dataset you would want to evaluate your model over, you can use the previous validation or prepare a seperate testing dataset.
 
 
@@ -99,6 +104,9 @@ If you also want to visualize what your images looks like as it passes through t
 
 ## Implementation with OpenCV 
 
+There is a slight delay when using the predict_video.py script. in my laptop about 0.4 sec, that delay would increade if you are running this on a development board such as the rpi. Overall its working and classifying mangoes properly, there are a few bugs with multithreading so I advice not to use my code. 
+
+![sample prediction](https://github.com/ryanliwag/Easy-Image-Classification/blob/master/images/unripe.png)
 
 ## Credits
 
