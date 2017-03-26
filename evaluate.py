@@ -78,7 +78,7 @@ with tf.device('/cpu:0'):
 
 	loaded_model.compile(loss=losstype, optimizer='rmsprop', metrics=['accuracy'])
 
-
+	
 
 	datagen = ImageDataGenerator(rescale=1./255)
 
@@ -91,9 +91,12 @@ with tf.device('/cpu:0'):
 
 	probos_finetune=loaded_model.predict_generator(generator_test, len(generator_test.classes), max_q_size=1)
 	gnd_truth = generator_test.classes
-
+	
 	dics = list(generator_test.class_indices.keys())
+
 	dics.extend(["micro-average curve","macro-average curve"])
+
+	
 
 	skplt.plot_precision_recall_curve(y_true=gnd_truth, y_probas=probos_finetune)
 	plt.legend(dics[:5], loc='lower left')

@@ -93,6 +93,10 @@ The output figures should then be saved in your specified destination directory.
 
 ![graphs and figures](https://github.com/ryanliwag/Easy-Image-Classification/blob/master/images/evaluate.png)
 
+If you also want to visualize what your images looks like as it passes through the convolutional blocks. You can use [Quiver](https://github.com/keplr-io/quiver), great awesome interactive tool for visualizing covnets and very easy to implement with keras.
+
+![covnets visualization](https://github.com/ryanliwag/Easy-Image-Classification/blob/master/images/covnet_sample.png)
+
 ## Implementation with OpenCV 
 
 
