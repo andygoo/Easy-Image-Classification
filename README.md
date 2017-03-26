@@ -17,14 +17,6 @@ Create a dataset of images on which you would retrain the model with. In my inst
 Images should be contained in their respective class folders.
 Your images should be contained in a folder split between training and validation. I just always go with the 80:20 ratio. you can also add a seperate testing directory to evaluate the model after training. 
 
-I also uploaded my own script in ML-tools folder it helps to randomly sort and prepare my training, validation and testing dataset.
-
-```shell
-python3 sort --srcdir "/images" #folder where images are seperated into classes
-	     --destdir "/dataset" 
-	     --per_train 70 #percentage of data split into training directory
-	     --per_validate 20 #percentage of data split into validation directory
-```
 You're dataset should have a format as the one seen below.
 
 ```shell
@@ -94,7 +86,7 @@ python3 evaluate.py --model_location vgg16_model
           --nb_classes 3 --img_width 300 --img_height 300
 
 ```
-The output figures should then be saved in your specified destination directory. Also if you're training with gpu and you have enough vram memory, you can comment out the line "with tf.device('/cpu:0'):" in evaluate.py.
+The output figures should then be saved in your specified destination directory. Also if you're training with gpu and you have enough vram memory, you can comment out the line "with tf.device('/cpu:0'):" in evaluate.py. If you are using any of the figures produced by evaluate.py for a paper, kindly [cite](https://github.com/reiinakano/scikit-plot) them. 
 
 ![graphs and figures](https://github.com/ryanliwag/Easy-Image-Classification/blob/master/images/evaluate.png)
 
@@ -108,6 +100,6 @@ There is a slight delay when using the predict_video.py script. in my laptop abo
 
 ![sample prediction](https://github.com/ryanliwag/Easy-Image-Classification/blob/master/images/unripe.png)
 
-## Credits
+
 
 ## still updating
