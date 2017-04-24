@@ -101,5 +101,3 @@ There is a slight delay when using the predict_video.py script. in my laptop abo
 ![sample prediction](https://github.com/ryanliwag/Easy-Image-Classification/blob/master/images/unripe.png)
 
 
-
-## still updating
